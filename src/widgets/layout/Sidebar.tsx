@@ -1,61 +1,134 @@
-export const Sidebar = ({ onToggle, open }: any) => {
-    const Menus = [
-        { title: "Навигатор", src: "navigator" },
-        { title: "Обучение", src: "training" },
-        { title: "Маркет ", src: "market" },
-        { title: "Вебинары", src: "vebinars" },
-        { title: "Обучение", src: "training" },
-        { title: "Документы", src: "documents" },
-        { title: "Идеи", src: "ideas" },
-        { title: "Объявления", src: "ads" },
-        { title: "Еще", src: "more" },
-    ];
-    return (
-        <div className="flex">
-            <div
-                className={` ${
-                    open ? "w-72" : "w-20 "
-                } bg-dark-purple h-screen p-5  pt-8 relative duration-300`}
-            >
-                <img
-                    src="/images/control.png"
-                    className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
-           border-2 rounded-full  ${!open && "rotate-180"}`}
-                    onClick={onToggle}
-                />
-                <div className="flex gap-x-4 items-center">
-                    <img
-                        src="/images/logo.png"
-                        className={`cursor-pointer duration-500 ${
-                            open && "rotate-[360deg]"
-                        }`}
-                    />
-                    <h1
-                        className={`text-white origin-left font-medium text-xl duration-200 ${
-                            !open && "scale-0"
-                        }`}
-                    >
-                        Designer
-                    </h1>
-                </div>
-                <ul className="pt-6">
-                    {Menus.map((Menu, index) => (
-                        <li
-                            key={index}
-                            className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
-              ${Menu ? "mt-9" : "mt-2"} ${
-                                index === 0 && "bg-light-white"
-                            } `}
-                        >
-                            <img src={`/images/${Menu.src}.svg`} />
-                            <span className={`${!open && "hidden"} origin-left duration-200`}>
-                {Menu.title}
-              </span>
-                        </li>
-                    ))}
+import React, {useState} from 'react';
+import s from './Sidebar.module.scss'
+
+const Sidebar = () => {
+    const [active,setActive] = useState(false)
+    const menuItems = [
+        {
+            title: 'Навигатор',
+            active: true,
+            img: 'public/icons/document-info.svg',
+            notifications: null,
+        },
+        {
+            title: 'Обучение',
+            active: false,
+            img: 'public/icons/target.svg',
+            notifications: null,
+        },
+        {
+            title: 'Проверка знаний',
+            active: false,
+            img: 'public/icons/users-alt.svg',
+            notifications: null,
+        },
+        {
+            title: 'Маркет',
+            active: false,
+            img: 'public/icons/shopping-bag.svg',
+            notifications: null,
+        },
+        {
+            title: 'Вебинары',
+            active: false,
+            img: 'public/icons/notes.svg',
+            notifications: null,
+        },
+        {
+            title: 'Обучение',
+            active: false,
+            img: 'public/icons/headphones.svg',
+            notifications: null,
+        },
+        {
+            title: 'Финансы',
+            active: false,
+            img: 'public/icons/suitcase.svg',
+            notifications: null,
+        },
+        {
+            title: 'Документы',
+            active: false,
+            img: 'public/icons/lightning.svg',
+            notifications: null,
+        },
+        {
+            title: 'Идеи',
+            active: false,
+            img: 'public/icons/star.svg',
+            notifications: null,
+        },
+        {
+            title: 'Объявления',
+            active: false,
+            img: 'public/icons/ads.svg',
+            notifications: null,
+        },
+        {
+            title: 'Еще',
+            active: false,
+            img: 'public/icons/subject.svg',
+            notifications: null,
+        },
+        {
+            title: 'Автоматизация',
+            active: false,
+            img: 'public/icons/suitcase.svg',
+            notifications: null,
+        },
+        {
+            title: 'Уведомления',
+            active: false,
+            img: 'public/icons/bell.svg',
+            notifications: null,
+        },
+    ]
+    const user = [
+        {
+            name: 'Станислав. И',
+            role: 'UI/UX Designer',
+            img: 'public/icons/acc.svg'
+        }
+    ]
+    return(
+        <div className={active ? s.Sidebar : s.Sidebar_hidden} onClick={() => setActive(!active)}>
+            <div className={s.Sidebar_top}>
+                <img alt='logo' src='public/icons/logo.svg' className={s.logo}/>
+                <ul className={s.Sidebar_menu}>
+                    {menuItems.map((e, index) => {
+                        if (index === menuItems.length - 1){
+                            null
+                        }
+                        else return(
+                            <li key={index} className={ e.active ? s.active : null}>
+                                <img src={`${e.img}`} alt='icon'/>
+                                <p>{e.title}</p>
+                            </li>
+                        )})}
                 </ul>
+            </div>
+            <div className={s.Sidebar_bottom}>
+                {menuItems.map((e, index) => {
+                    if (index === menuItems.length - 1){
+                        return(
+                            <li key={index} className={s.notification}>
+                                <img src={`${e.img}`} alt='icon'/>
+                                <p>{e.title}</p>
+                            </li>
+                        )}})}
+                {user.map(e =>
+                { return(
+                    <div className={s.user}>
+                        <img src={e.img}/>
+                        <div className={s.text}>
+                            <h3>{e.name}</h3>
+                            <p>{e.role}</p>
+                        </div>
+                    </div>
+                )
+                })}
             </div>
         </div>
     );
-
-}
+};
+export default Sidebar;
