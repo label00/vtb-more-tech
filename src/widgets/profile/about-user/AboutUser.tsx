@@ -13,27 +13,27 @@ export const AboutUser = (props: Props) => {
         <div className="flex gap-6">
 
           <div className="relative w-16">
-            <img src="achiv/ach-1.png"/>
+            <img src="/achiv/ach-1.png"/>
             <div className="absolute right-0 bottom-0 bg-black text-white font-sm font-bold py-1 px-1.5 rounded-lg leading-130">12</div>
           </div>
           <div className="relative w-16">
-            <img src="achiv/ach-2.png"/>
+            <img src="/achiv/ach-2.png"/>
             <div className="absolute right-0 bottom-0 bg-black text-white font-sm font-bold py-1 px-1.5 rounded-lg leading-130">12</div>
           </div>
           <div className="relative w-16">
-            <img src="achiv/ach-3.png"/>
+            <img src="/achiv/ach-3.png"/>
             <div className="absolute right-0 bottom-0 bg-black text-white font-sm font-bold py-1 px-1.5 rounded-lg leading-130">12</div>
           </div>
           <div className="relative w-16">
-            <img src="achiv/ach-4.png"/>
+            <img src="/achiv/ach-4.png"/>
             <div className="absolute right-0 bottom-0 bg-black text-white font-sm font-bold py-1 px-1.5 rounded-lg leading-130">12</div>
           </div>
           <div className="relative w-16">
-            <img src="achiv/ach-5.png"/>
+            <img src="/achiv/ach-5.png"/>
             <div className="absolute right-0 bottom-0 bg-black text-white font-sm font-bold py-1 px-1.5 rounded-lg leading-130">12</div>
           </div>
           <div className="relative w-16">
-            <img src="achiv/ach-6.png"/>
+            <img src="/achiv/ach-6.png"/>
             <div className="absolute right-0 bottom-0 bg-black text-white font-sm font-bold py-1 px-1.5 rounded-lg leading-130">12</div>
           </div>
 

@@ -8,6 +8,7 @@ export const Routing = () =>
     <Route element={<Layout/>}>
       <Route path="/" element={<MainPage />}></Route>
       <Route path="/profile" element={<ProfilePage />}></Route>
+      <Route path="/profile/:tab" element={<ProfilePage />}></Route>
     </Route>
     <Route path="*" element={<Navigate to="/"/>}></Route>
   </Routes>

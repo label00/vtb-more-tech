@@ -5,10 +5,12 @@ type TabsProps = {
   trigger: ReactNode;
   children: ReactNode;
   defaultValue: string;
+  value?: string;
+  onValueChange?: (str: string) => void;
 }
-export const Tabs = ({ trigger, children, defaultValue }: TabsProps) => {
+export const Tabs = ({ trigger, children, defaultValue, value, onValueChange }: TabsProps) => {
   return (
-    <RadixTabs.Root defaultValue={defaultValue}>
+    <RadixTabs.Root value={value} onValueChange={onValueChange} defaultValue={defaultValue}>
       <RadixTabs.List className="flex gap-8 mb-9">
         {trigger}
       </RadixTabs.List>

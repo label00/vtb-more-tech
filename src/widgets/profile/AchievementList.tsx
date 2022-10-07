@@ -23,19 +23,19 @@ export const AchievementList = (props: Props) => {
           <TabContent value="soft">
             <div className="grid grid-cols-4 gap-y-10 gap-x-4 pt-6">
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Коммуникации </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Эффективная коммуникация</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Управление проектами</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Введение в проектное управление</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Oneboarding</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">
                   Необходимая информация в первые дни
@@ -43,33 +43,33 @@ export const AchievementList = (props: Props) => {
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Охрана труда </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Основные принципы</p>
               </div>
 
               {/*2*/}
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Oneboarding</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">О нас</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Коммуникации </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Деловая переписка</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Управление проектами</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Система Waterfall</p>
               </div>
 
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Охрана труда </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Законодательство</p>
               </div>
@@ -81,19 +81,19 @@ export const AchievementList = (props: Props) => {
           <TabContent value="hard">
             <div className="grid grid-cols-4 gap-y-10 gap-x-4 pt-6">
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Коммуникации </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Эффективная коммуникация</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Управление проектами</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Введение в проектное управление</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Oneboarding</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">
                   Необходимая информация в первые дни
@@ -101,33 +101,33 @@ export const AchievementList = (props: Props) => {
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Охрана труда </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Основные принципы</p>
               </div>
 
               {/*2*/}
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Oneboarding</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">О нас</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Коммуникации </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Деловая переписка</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Управление проектами</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Система Waterfall</p>
               </div>
 
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Охрана труда </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Законодательство</p>
               </div>
@@ -139,19 +139,19 @@ export const AchievementList = (props: Props) => {
           <TabContent value="manager">
             <div className="grid grid-cols-4 gap-y-10 gap-x-4 pt-6">
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Коммуникации </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Эффективная коммуникация</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Управление проектами</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Введение в проектное управление</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Oneboarding</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">
                   Необходимая информация в первые дни
@@ -159,33 +159,33 @@ export const AchievementList = (props: Props) => {
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable />
                 <H5 className="mb-1 mt-2 text-center">Охрана труда </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Основные принципы</p>
               </div>
 
               {/*2*/}
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Oneboarding</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">О нас</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Коммуникации </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Деловая переписка</p>
               </div>
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Управление проектами</H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Система Waterfall</p>
               </div>
 
 
               <div className="flex flex-col items-center">
-                <Achievement src="achiv/ach-1.png" badge="1/1" isAvailable={false} />
+                <Achievement src="/achiv/ach-1.png" badge="1/1" isAvailable={false} />
                 <H5 className="mb-1 mt-2 text-center">Охрана труда </H5>
                 <p className="text-center font-semibold text-sm  text-slate-400">Законодательство</p>
               </div>

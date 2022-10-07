@@ -9,7 +9,7 @@ export const MainInfo = () => {
 
         */}
         <div className="flex flex-col items-center bg-[#F5F5F5] py-6 mb-4">
-          <img src="images/avatar.png" alt="avatar" className="mb-3"/>
+          <img src="/images/avatar.png" alt="avatar" className="mb-3"/>
           <span className="text-lg font-[700] mb-1">Антон Маркин</span>
           <span className="text-sm text-[#828282] mb-6">UI/UX Designer</span>
           <div className="flex gap-8 justify-between">

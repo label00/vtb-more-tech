@@ -1,20 +1,23 @@
 import { AboutUser, MainInfo, NftEvents } from 'src/widgets';
 import { Tab, TabContent, Tabs } from 'src/shared/ui';
 import { AchievementList } from 'src/widgets/profile/AchievementList';
+import { Link, useParams } from 'react-router-dom';
 
 export const ProfilePage = () => {
-  const settings = {
-    dots: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4
-  };
+  const { tab } = useParams();
 
+  const tabValue = tab ?? 'profile';
+
+  console.log(tabValue);
   return (
-    <Tabs defaultValue="profile" trigger={
+    <Tabs defaultValue="profile" value={tabValue}  trigger={
       <>
-        <Tab value="profile">Профиль</Tab>
-        <Tab value="achievements">Испытания</Tab>
+        <Tab value="profile">
+          <Link to={'/profile'}>Профиль</Link>
+        </Tab>
+        <Tab value="achievements">
+          <Link to={'/profile/achievements'}>Испытания</Link>
+        </Tab>
         <Tab value="nft_event">NFT События</Tab>
         <Tab value="my_shop">Мои товары</Tab>
         <Tab value="posts">Посты</Tab>
