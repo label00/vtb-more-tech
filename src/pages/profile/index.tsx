@@ -1,5 +1,6 @@
 import { AboutUser, MainInfo } from 'src/widgets';
 import { Tab, TabContent, Tabs } from 'src/shared/ui';
+import { AchievementList } from 'src/widgets/profile/AchievementList';
 
 
 export const ProfilePage = () => {
@@ -7,7 +8,7 @@ export const ProfilePage = () => {
     <Tabs defaultValue="profile" trigger={
       <>
         <Tab value="profile">Профиль</Tab>
-        <Tab value="test">Испытания</Tab>
+        <Tab value="achievements">Испытания</Tab>
         <Tab value="nft_event">NFT События</Tab>
         <Tab value="my_shop">Мои товары</Tab>
         <Tab value="posts">Посты</Tab>
@@ -19,6 +20,9 @@ export const ProfilePage = () => {
           <MainInfo />
           <AboutUser />
         </div>
+      </TabContent>
+      <TabContent value="achievements">
+        <AchievementList />
       </TabContent>
     </Tabs>
 

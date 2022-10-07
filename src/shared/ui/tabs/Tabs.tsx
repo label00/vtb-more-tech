@@ -16,3 +16,14 @@ export const Tabs = ({ trigger, children, defaultValue }: TabsProps) => {
     </RadixTabs.Root>
   )
 }
+
+export const BlueTabs = ({ trigger, children, defaultValue }: TabsProps) => {
+  return (
+    <RadixTabs.Root defaultValue={defaultValue}>
+      <RadixTabs.List className="w-full flex bg-[#F8F8F8] rounded-lg p-1.5">
+        {trigger}
+      </RadixTabs.List>
+      {children}
+    </RadixTabs.Root>
+  )
+}

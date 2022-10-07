@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-export const Sidebar = () => {
-    const [open, setOpen] = useState(false);
+export const Sidebar = ({ onToggle, open }: any) => {
     const Menus = [
         { title: "Навигатор", src: "navigator" },
         { title: "Обучение", src: "training" },
@@ -25,7 +22,7 @@ export const Sidebar = () => {
                     src="images/control.png"
                     className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
            border-2 rounded-full  ${!open && "rotate-180"}`}
-                    onClick={() => setOpen(!open)}
+                    onClick={onToggle}
                 />
                 <div className="flex gap-x-4 items-center">
                     <img
@@ -51,7 +48,7 @@ export const Sidebar = () => {
                                 index === 0 && "bg-light-white"
                             } `}
                         >
-                            <img src={`iamges/${Menu.src}.svg`} />
+                            <img src={`images/${Menu.src}.svg`} />
                             <span className={`${!open && "hidden"} origin-left duration-200`}>
                 {Menu.title}
               </span>
