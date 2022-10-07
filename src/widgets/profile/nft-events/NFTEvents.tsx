@@ -12,7 +12,7 @@ export const BlockHeader = (props: BlockHeaderProps) => {
   return (
     <div className="w-full mb-6 flex justify-between">
       <H2>Мои NFT</H2>
-      <Link className="flex items-center text-sm font-semibold text-slate-400" to="/">
+      <Link className="flex items-center text-sm font-semibold text-slate-400" to="./">
         <span className="mr-2.5">Все 32</span>
         <ChevronRight className="stroke-slate-400" size={12} />
       </Link>
