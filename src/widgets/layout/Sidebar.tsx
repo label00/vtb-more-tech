@@ -5,14 +5,13 @@ export const Sidebar = () => {
     const Menus = [
         { title: "Навигатор", src: "navigator" },
         { title: "Обучение", src: "training" },
-        { title: "Маркет ", src: "training" },
-        { title: "Вебинары", src: "training" },
+        { title: "Маркет ", src: "market" },
+        { title: "Вебинары", src: "vebinars" },
         { title: "Обучение", src: "training" },
-        { title: "Документы", src: "Setting" },
-        { title: "Идеи", src: "training" },
-        { title: "Объявления", src: "training" },
-        { title: "Еще", src: "training" },
-        { title: "Автоматизация", src: "training" },
+        { title: "Документы", src: "documents" },
+        { title: "Идеи", src: "ideas" },
+        { title: "Объявления", src: "ads" },
+        { title: "Еще", src: "more" },
     ];
     return (
         <div className="flex">
@@ -51,7 +50,7 @@ export const Sidebar = () => {
                                 index === 0 && "bg-light-white"
                             } `}
                         >
-                            <img src={`iamges/${Menu.src}.svg`} />
+                            <img src={`images/${Menu.src}.svg`} />
                             <span className={`${!open && "hidden"} origin-left duration-200`}>
                 {Menu.title}
               </span>
