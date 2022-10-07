@@ -1,22 +1,45 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import './BattlePass.css';
-import { Calendar, Star } from 'react-feather';
+import { ArrowLeft, ArrowRight, Calendar, Star } from 'react-feather';
+import { NftCard } from 'src/widgets/profile/nft-events/NFTCard';
+import cn from 'classnames';
 
-type Props = {};
-export const BattlePass = (props: Props) => {
+const NextArrow = (props: any) =>
+  <button
+    onClick={props.onClick}
+    className={cn('w-6 h-6 rounded-full bg-slate-300/40 hover:bg-slate-300 flex items-center justify-center', props.className)}
+  ><
+    ArrowRight size={14} />
+  </button>
+const PreArrow = (props: any) =>
+  <button
+    onClick={props.onClick}
+    className={cn('w-6 h-6 rounded-full bg-slate-300/40 hover:bg-slate-300 flex items-center justify-center', props.className)
+  }>
+    <ArrowLeft size={14} />
+  </button>
+
+type BattlePassProps = {};
+export const BattlePass = (props: BattlePassProps) => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
+    customPaging: (i: number) => (
+      <div className="py-2 px-3">
+        {i + 1}
+      </div>
+    ),
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    nextArrow: <NextArrow />,
+    prevArrow: <PreArrow />
   };
 
   return (
-    <div>
-      <div className="flex justify-between">
+    <div className="drop-shadow-lg bg-white">
+      <div className="flex justify-between py-8 px-6">
         <div className="flex font-bold items-center gap-2 text-sm">
           <Star size={14}/> NFT Событие месяца
         </div>
@@ -26,30 +49,34 @@ export const BattlePass = (props: Props) => {
         </div>
       </div>
 
-      <div className="bg-slate-200">
+      <div>
         <Slider arrows {...settings}>
           <div>
-            <h3>2</h3>
+            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
           </div>
 
           <div>
-            <h3>3</h3>
+            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
           </div>
 
           <div>
-            <h3>4</h3>
+            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
           </div>
+
           <div>
-            <h3>5</h3>
+            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
           </div>
+
           <div>
-            <h3>6</h3>
+            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
           </div>
+
           <div>
-            <h3>7</h3>
+            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
           </div>
+
           <div>
-            <h3>8</h3>
+            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
           </div>
         </Slider>
       </div>

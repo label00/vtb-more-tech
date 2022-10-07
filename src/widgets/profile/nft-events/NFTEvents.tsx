@@ -2,6 +2,7 @@ import { H2 } from 'src/shared/ui';
 import { NftCard } from 'src/widgets/profile/nft-events/NFTCard';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'react-feather';
+import { BattlePass } from 'src/widgets/profile/nft-events/BattlePass';
 
 
 type BlockHeaderProps = {
@@ -26,9 +27,9 @@ export const NftEvents = (props: NftEventsProps) => {
 
   return (
     <div className="w-full">
-      {/*
-      <BattlePass />
-      */}
+      <div className="mb-8">
+        <BattlePass />
+      </div>
 
       <div className="mb-8">
         <BlockHeader title="Мои NFT" count={32} />
