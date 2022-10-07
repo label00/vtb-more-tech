@@ -18,7 +18,9 @@ export const ProfilePage = () => {
         <Tab value="achievements">
           <Link to={'/profile/achievements'}>Испытания</Link>
         </Tab>
-        <Tab value="nft_event">NFT События</Tab>
+        <Tab value="nft_event">
+          <Link to={'/profile/nft_event'}>NFT События</Link>
+        </Tab>
         <Tab value="my_shop">Мои товары</Tab>
         <Tab value="posts">Посты</Tab>
         <Tab value="food">Еда</Tab>
