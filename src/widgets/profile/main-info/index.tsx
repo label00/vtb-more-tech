@@ -1,5 +1,5 @@
 import { H3 } from 'src/shared/ui';
-import { Copy, Facebook, Home, Mail, Menu, MessageSquare, Phone, Truck, Twitch, Twitter } from 'react-feather';
+import { Copy, Facebook, Home, Mail, Menu, MessageSquare, Phone, Truck,  Twitter } from 'react-feather';
 
 export const MainInfo = () => {
   return (
