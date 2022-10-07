@@ -51,7 +51,7 @@ export const Sidebar = () => {
                                 index === 0 && "bg-light-white"
                             } `}
                         >
-                            <img src={`./src/assets/${Menu.src}.png`} />
+                            <img src={`iamges/${Menu.src}.svg`} />
                             <span className={`${!open && "hidden"} origin-left duration-200`}>
                 {Menu.title}
               </span>
