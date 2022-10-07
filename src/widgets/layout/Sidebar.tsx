@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const Sidebar = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const Menus = [
         { title: "Навигатор", src: "navigator" },
         { title: "Обучение", src: "training" },

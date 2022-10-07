@@ -6,3 +6,5 @@ export const Card = ({ children, className }: PropsWithChildren<{ className?: st
     {children}
   </div>
 )
+
+export * from './WhiteCard';
