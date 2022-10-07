@@ -1,9 +1,15 @@
-import { AboutUser, MainInfo } from 'src/widgets';
+import { AboutUser, MainInfo, NftEvents } from 'src/widgets';
 import { Tab, TabContent, Tabs } from 'src/shared/ui';
 import { AchievementList } from 'src/widgets/profile/AchievementList';
 
-
 export const ProfilePage = () => {
+  const settings = {
+    dots: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4
+  };
+
   return (
     <Tabs defaultValue="profile" trigger={
       <>
@@ -23,6 +29,10 @@ export const ProfilePage = () => {
       </TabContent>
       <TabContent value="achievements">
         <AchievementList />
+      </TabContent>
+
+      <TabContent value="nft_event">
+        <NftEvents />
       </TabContent>
     </Tabs>
 
