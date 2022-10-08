@@ -3,7 +3,6 @@ import { ProductCard } from 'src/widgets/market/ProductCard';
 import { FoodSection } from 'src/pages/market/FoodSection';
 import { useGate, useStore } from 'effector-react';
 import { gate, clothes$, usual$ } from 'src/pages/market/model';
-import { Empty } from 'antd';
 
 export const MarketPage = () => {
   useGate(gate);
@@ -25,7 +24,7 @@ export const MarketPage = () => {
         <TabContent value="market">
           <H3 className="mb-6">Брендированные</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            { !data.length && <Empty description="Нет товаров" /> }
+            { !data.length && <div>Нет товаров</div> }
             {
               data.map((item, idx) =>
                 <ProductCard key={idx} id={item.uri} title={item.name} price={item.rublePrice} img={item.imageUrl} />)
@@ -34,7 +33,7 @@ export const MarketPage = () => {
 
           <H3 className="my-6">Разное</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            { !data.length && <Empty description="Нет товаров" /> }
+            { !data.length && <div>Нет товаров</div> }
             {
               other.map((item, idx) =>
                 <ProductCard key={idx} id={item.uri} title={item.name} price={item.rublePrice} img={item.imageUrl} />)
