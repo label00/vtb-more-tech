@@ -36,9 +36,9 @@ export const NftEvents = (props: NftEventsProps) => {
 
         <div className="grid gap-4 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
           <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-2.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-3.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-4.png" icon="/nft/matic.svg" price="0.435 MATIC" />
         </div>
       </div>
 
@@ -46,22 +46,21 @@ export const NftEvents = (props: NftEventsProps) => {
         <BlockHeader title="Еще предстоит получить" count={32} />
 
         <div className="grid gap-4 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-5.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-6.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-7.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-8.png" icon="/nft/matic.svg" price="0.435 MATIC" />
         </div>
       </div>
 
       <div className="mb-8">
         <BlockHeader title="VTB NFT" count={432} />
 
-
         <div className="grid gap-4 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
-          <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-9.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-9.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-9.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <NftCard title="Cybergirl #4534" img="/nft/nft-9.png" icon="/nft/matic.svg" price="0.435 MATIC" />
         </div>
       </div>
 
