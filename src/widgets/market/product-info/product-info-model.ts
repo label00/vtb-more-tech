@@ -1,7 +1,7 @@
 import { createEffect, createEvent, sample } from 'effector';
 import { toast } from 'react-toastify';
 import { ClotheType } from 'src/shared/types';
-import { fetchBuyNft } from 'src/shared/api';
+import { fetchBuyNft } from 'src/shared/api/market';
 
 const clickedOnBuy = createEvent<ClotheType>();
 const buyNft = createEffect((info: ClotheType) => {

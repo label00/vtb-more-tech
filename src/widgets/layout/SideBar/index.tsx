@@ -1,12 +1,10 @@
-import { FC, ReactNode } from 'react';
-
-import Wallet from './Wallet';
 import Drum from './Drum';
 import Trainings from './Trainings';
 import Planning from './Planning';
 import Services from './Services';
+import { Wallet } from './Wallet';
 
-const SideBar: FC = (): JSX.Element => {
+const SideBar = () => {
     return (
         <aside className="sidebar">
             <Wallet />

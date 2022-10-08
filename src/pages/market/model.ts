@@ -1,6 +1,6 @@
 import { createEffect, restore, sample } from 'effector';
 import { createGate } from 'effector-react';
-import { getClothes, getUsual } from 'src/shared/api';
+import { getClothes, getUsual } from 'src/shared/api/market';
 
 
 const fetchClothes = createEffect(() => getClothes())
