@@ -2,10 +2,10 @@ import axios from 'axios';
 import { ClotheType } from 'src/shared/types';
 
 export const getClothes = () => axios({
-  method: 'GET', url: 'https://wegoapp.ru/api/nft/clothes'}) as Promise<ClotheType[]>
+  method: 'GET', url: 'https://wegoapp.ru/api/nft/clothes'}).then(data => data.data) as Promise<ClotheType[]>
 
 export const getUsual = () => axios({
-  method: 'GET', url: 'https://wegoapp.ru/api/nft/usual'}) as Promise<ClotheType[]>
+  method: 'GET', url: 'https://wegoapp.ru/api/nft/usual'}).then(data => data.data) as Promise<ClotheType[]>
 
 
 export const fetchBuyNft = (uri: string, currency: string) => axios({

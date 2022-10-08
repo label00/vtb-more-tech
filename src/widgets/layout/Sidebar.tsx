@@ -44,7 +44,7 @@ const menuItems = [
     active: false,
     img: '/icons/headphones.svg',
     notifications: null,
-    link: '/t'
+    link: '/education'
   },
   {
     title: 'Финансы',
