@@ -26,15 +26,27 @@
             background-color: #fff;
         }
     }
-    .user{
+    .user {
         margin-top: 20px;
-        margin-left: 10px;
         display: flex;
         gap: 20px;
+        align-items: center;
+
+        img {
+            border: 3px solid transparent;
+        }
+
         h3{
             color: #142D40;
             font-weight: 800;
             margin-bottom: 6px;
+        }
+
+        &__active {
+            img {
+                border: 3px solid #225AD6;
+            }
+
         }
     }
     .text{
@@ -57,7 +69,7 @@
         p{
             display: none;
         }
-        .Sidebar_menu li{
+        .Sidebar_menu .link {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -88,10 +100,8 @@
             background-color: #fff;
         }
         .user{
-            margin-top: 20px;
-            margin-left: 10px;
-            display: flex;
-            gap: 20px;
+            gap: 0;
+            justify-content: center;
             h3{
                 display: none;
             }
@@ -104,7 +114,7 @@
     flex-direction: column;
     margin-top: 50px;
 }
-.Sidebar li {
+.Sidebar .link {
     display: flex;
     align-items: center;
     gap: 25px;
