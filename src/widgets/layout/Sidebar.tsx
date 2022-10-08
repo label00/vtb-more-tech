@@ -91,7 +91,7 @@ const menuItems = [
 ]
 
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const [active, setActive] = useState(false)
 
   return (
@@ -127,4 +127,3 @@ const Sidebar = () => {
     </div>
   );
 };
-export default Sidebar;
