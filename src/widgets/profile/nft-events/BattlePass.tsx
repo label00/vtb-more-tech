@@ -2,7 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import './BattlePass.css';
 import { ArrowLeft, ArrowRight, Calendar, Star } from 'react-feather';
-import { NftCard } from 'src/widgets/profile/nft-events/NFTCard';
+import { NftCard, Progress, WhiteNftCard } from 'src/widgets/profile/nft-events/NFTCard';
 import cn from 'classnames';
 
 const NextArrow = (props: any) =>
@@ -10,14 +10,14 @@ const NextArrow = (props: any) =>
     onClick={props.onClick}
     className={cn('w-6 h-6 rounded-full bg-slate-300/40 hover:bg-slate-300 flex items-center justify-center', props.className)}
   ><
-    ArrowRight size={14} />
+    ArrowRight size={14}/>
   </button>
 const PreArrow = (props: any) =>
   <button
     onClick={props.onClick}
     className={cn('w-6 h-6 rounded-full bg-slate-300/40 hover:bg-slate-300 flex items-center justify-center', props.className)
-  }>
-    <ArrowLeft size={14} />
+    }>
+    <ArrowLeft size={14}/>
   </button>
 
 type BattlePassProps = {};
@@ -31,10 +31,11 @@ export const BattlePass = (props: BattlePassProps) => {
       </div>
     ),
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 3,
-    nextArrow: <NextArrow />,
-    prevArrow: <PreArrow />
+    nextArrow: <NextArrow/>,
+    prevArrow: <PreArrow/>,
+    variableWidth: true,
   };
 
   return (
@@ -51,33 +52,55 @@ export const BattlePass = (props: BattlePassProps) => {
 
       <div>
         <Slider arrows {...settings}>
-          <div>
-            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <div className="p-2 space-y-2">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={100}/>
           </div>
 
-          <div>
-            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <div className="p-2 space-y-2 ">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={55}/>
           </div>
 
-          <div>
-            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <div className="p-2 space-y-2 opacity-40 mix-blend-luminosity">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={0}/>
           </div>
 
-          <div>
-            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <div className="p-2 space-y-2 opacity-40 mix-blend-luminosity">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={0}/>
           </div>
 
-          <div>
-            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+          <div className="p-2 space-y-2 opacity-40 mix-blend-luminosity">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={0}/>
           </div>
 
-          <div>
-            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+
+          <div className="p-2 space-y-2 opacity-40 mix-blend-luminosity">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={0}/>
           </div>
 
-          <div>
-            <NftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC" />
+
+          <div className="p-2 space-y-2 opacity-40 mix-blend-luminosity">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={0}/>
           </div>
+
+
+          <div className="p-2 space-y-2 opacity-40 mix-blend-luminosity">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={0}/>
+          </div>
+
+          <div className="p-2 space-y-2 opacity-40 mix-blend-luminosity">
+            <WhiteNftCard title="Cybergirl #4534" img="/nft/nft-1.png" icon="/nft/matic.svg" price="0.435 MATIC"/>
+            <Progress value={0}/>
+          </div>
+
+
         </Slider>
       </div>
     </div>
