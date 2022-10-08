@@ -30,7 +30,7 @@ const menuItems = [
     active: false,
     img: '/icons/shopping-bag.svg',
     notifications: null,
-    link: '/t'
+    link: '/market'
   },
   {
     title: 'Вебинары',
