@@ -4,10 +4,7 @@ import Sidebar from 'src/widgets/layout/Sidebar'
 import cn from 'classnames';
 
 export const Layout = () =>
-    <div className={cn('h-full grid', {
-        'grid-cols-[83px_1fr_400px]':!open,
-        'grid-cols-[250px_1fr_400px]':open,
-    })}>
+    <div className={cn('h-full grid grid-cols-[auto_1fr_400px]')}>
     <div className="App">
       <Sidebar />
     </div>

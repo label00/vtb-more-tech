@@ -95,7 +95,11 @@ const Sidebar = () => {
   const [active, setActive] = useState(false)
 
   return (
-    <div className={cn(s.Sidebar, { [s.Sidebar_hidden]: active })} onClick={() => setActive(!active)}>
+    <div
+      className={cn(s.Sidebar, { [s.Sidebar_hidden]: active })}
+      onMouseEnter={() => setActive(false)}
+      onMouseLeave={() => setActive(true)}
+    >
       <div className={s.Sidebar_top}>
         <img alt="logo" src="/icons/logo.svg" className={s.logo}/>
         <ul className={s.Sidebar_menu}>
