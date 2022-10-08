@@ -22,12 +22,7 @@ export const SendCoinDialog = (props: SendCoinDialogProps) => {
   const form = useStore(FormModel.state$);
   return <Dialog open={open} onClose={() => SendCoinModel.clickedClose()}>
     <DialogTitle>Отправить</DialogTitle>
-    <DialogContent>
-      <DialogContentText>
-        To subscribe to this website, please enter your email address here. We
-        will send updates occasionally.
-      </DialogContentText>
-
+    <DialogContent className="w-[400px]">
       <div className="flex flex-col gap-1.5">
         <FormControl fullWidth margin="dense">
           <InputLabel id="mon">Монета</InputLabel>
