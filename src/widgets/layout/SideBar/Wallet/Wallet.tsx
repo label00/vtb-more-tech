@@ -3,6 +3,8 @@ import { WalletModel } from 'src/widgets/layout/SideBar/Wallet/wallet-model';
 import SideBarTop from 'src/widgets/layout/SideBar/SideBarTop';
 import Balance from 'src/widgets/layout/SideBar/Wallet/Balance';
 import Button from 'src/widgets/layout/SideBar/Wallet/Button';
+import { SendCoinDialog } from 'src/features/send-coins/SendCoinDialog';
+import { SendCoinModel } from 'src/features/send-coins/send-coin-model';
 
 export const Wallet = () => {
   useGate(WalletModel.gate);
@@ -17,10 +19,16 @@ export const Wallet = () => {
       </div>
       <ul className="sidebar__buttons">
         <Button icon="/img/global/layout/sidebar/wallet/buttons/top-up-icon.svg" text="Пополнить"/>
-        <Button icon="/img/global/layout/sidebar/wallet/buttons/send-icon.svg" text="Отправить"/>
+        <Button
+          icon="/img/global/layout/sidebar/wallet/buttons/send-icon.svg"
+          text="Отправить"
+          onClick={() => SendCoinModel.clickedOpen()}
+        />
         <Button icon="/img/global/layout/sidebar/wallet/buttons/exchange-icon.svg" text="Обменять"/>
         <Button icon="/img/global/layout/sidebar/wallet/buttons/withdraw-icon.svg" text="Вывести"/>
       </ul>
+
+      <SendCoinDialog />
     </div>
   );
 }

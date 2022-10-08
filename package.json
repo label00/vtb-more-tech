@@ -6,6 +6,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.8",
+    "@mui/system": "^5.10.8",
     "@radix-ui/react-progress": "^1.0.0",
     "@radix-ui/react-tabs": "^1.0.0",
     "@types/react-slick": "^0.23.10",
