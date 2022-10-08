@@ -125,8 +125,9 @@
     padding: 0 18px;
     background-color: #F8F8F8;
     &::before{
-        content: url('public/icons/active.svg');
+        content: url('/icons/active.svg');
         position: absolute;
         left: 0;
+        transform: translateY(4px);
     }
 }
