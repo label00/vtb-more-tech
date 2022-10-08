@@ -5,45 +5,30 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('./fonts/Gilroy.ttf');
+  src: url('/fonts/Gilroy.ttf');
 }
 
 .containerGen {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1013px;
-}
-
-.item1 {
-  background-color: rgb(244, 244, 244);
+  /**/
 }
 
 /* 412 */
 
 .container {
   display: grid;
-  grid-template-columns: 149px 550px 570px 412px;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 122px 891px;
+  gap: 0 40px;
 }
 
 .block1 {
   background-color: rgb(255, 255, 255);
-  grid-column-start: 2;
-  grid-column-end: 4
-}
-
-.block2 {
-  background-color: rgb(255, 255, 255);
-  grid-row-start: 1;
-  grid-row-end: 3;
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
 }
 
 .block3 {
   background-color: rgb(255, 255, 255);
-  grid-column-start: 2;
-  grid-column-end: 3;
 }
 
 .block4 {
@@ -51,11 +36,10 @@
 }
 
 .textOne {
-  width: 48;
+  display: block;
   height: 18px;
   margin-top: 42px;
   margin-left: 1px;
-  font-family: 'Gilroy';
   color: rgba(0, 0, 0, 1);
   opacity: 0.2;
   font-style: normal;
@@ -63,10 +47,12 @@
   font-size: 16px;
 }
 
+.textOne:hover {
+  color: black;
+}
+
 .line {
-  width: 1054px;
-  height: 0px;
-  border: 1px solid rgba(226, 226, 226, 1);
+  width: 100%;
 }
 
 /* 
@@ -113,7 +99,6 @@
 }
 
 .infoOne {
-  margin-top: 34px;
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 600;
@@ -273,6 +258,7 @@
 .dopInfoTwo {
   font-family: 'Gilroy';
   font-style: normal;
+  max-width: 600px;
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
