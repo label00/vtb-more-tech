@@ -28,7 +28,9 @@ export const ProfilePage = () => {
     }>
       <TabContent value="profile">
         <div className="grid gap-4 grid-cols-[450px,_1fr]">
-          <MainInfo />
+          <div>
+            <MainInfo />
+          </div>
           <AboutUser />
         </div>
       </TabContent>

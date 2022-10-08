@@ -8,7 +8,7 @@ import Services from './Services';
 
 const SideBar: FC = (): JSX.Element => {
     return (
-        <aside className="sidebar" id="main">
+        <aside className="sidebar">
             <Wallet />
             <Drum />
             <Trainings />

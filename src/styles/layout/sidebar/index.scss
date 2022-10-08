@@ -1,12 +1,7 @@
 /* ---- Side Bar ---- */
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 332px;
-    height: 100vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    height: 100%;
+    padding: 16px;
     background: #F5F5F5;
 
     &__item {
