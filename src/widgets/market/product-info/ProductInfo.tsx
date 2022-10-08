@@ -1,8 +1,14 @@
 import React from 'react';
-import style from './style.module.css';
+import style from '../style.module.css';
 import { Link } from 'react-router-dom';
+import { useStore } from 'effector-react';
+import { MarketItemModel } from 'src/pages/market-item/model';
+import { ProductInfoModel } from 'src/widgets/market/product-info/product-info-model';
 
 const ProductInfo = () => {
+  const info = useStore(MarketItemModel.store$);
+  const loading = useStore(ProductInfoModel.loading$);
+
   return (
     <div className={style.containerGen}>
       <div className={style.item1}>
@@ -14,44 +20,17 @@ const ProductInfo = () => {
           </div>
           <div className={style.block3}>
             <img
-              src="https://sun1-25.userapi.com/impg/kx5cWZNC3uIeeeK5LoswpCdFEtTdIDHjFlphVQ/CYv9LF_KZeY.jpg?size=483x483&quality=95&sign=42c48d7021e31aaba8f6330d0650478f&type=album"
+              src={info?.imageUrl}
+              alt="Продукт"
               className={style.imgOne}
             />
-            <div>
-              <div className={style.blockedOne}>
-                <div>
-                  <img
-                    src="https://sun9-20.userapi.com/impg/VdVD0IfW-1boPIrdtuu_5hA0YUYGCNGKQkuW7g/i25x_GnmRrU.jpg?size=114x114&quality=95&sign=3394a20180154e5f41d4dad009e20330&type=album"
-                    className={style.imgTwo}
-                  />
-                </div>
-                <div>
-                  <img
-                    src="https://sun9-58.userapi.com/impg/PK2PTpvoobOQgvg5CT1wqYXPp99ah8_gD13ZFQ/_5oACCdEclI.jpg?size=114x114&quality=95&sign=66f6bfa54b425a13715d22bcb4e3a113&type=album"
-                    className={style.imgThree}
-                  />
-                </div>
-                <div>
-                  <img
-                    src="https://sun9-33.userapi.com/impg/IdsGuX7Ofp71FxB2lui5gUsqSj-1fOaBivsZ1A/hjXiLhXKceo.jpg?size=114x114&quality=95&sign=b5b6c9123fe326874ec24daa8cbdb68b&type=album"
-                    className={style.imgThree}
-                  />
-                </div>
-                <div>
-                  <img
-                    src="https://sun9-51.userapi.com/impg/GSb-SVg-0q8Im8uCabBgl47ZMPyr1yTTiQbLgQ/5JVdRzSRMBQ.jpg?size=114x114&quality=95&sign=f34074eaafad8a715ea3a2cd6cab0911&type=album"
-                    className={style.imgThree}
-                  />
-                </div>
-              </div>
-            </div>
           </div>
           <div className={style.block4}>
             <div className={style.infoOne}>
-              0x432d....4325
+              {info?.uri}
             </div>
             <div className={style.infoTwo}>
-              Cybergirl #4534
+              {info?.name ?? 'Нет такого товара'}
             </div>
             <div className={style.infoThree}>
               Современная куртка представлена в единном экземпляре,<br/>
@@ -59,15 +38,11 @@ const ProductInfo = () => {
               размеры и пожелания
             </div>
             <div className={style.infoThree}>
-              <img
-                src="https://sun9-81.userapi.com/impg/FRC77F_4S0FKP1VtOctqUGt1jgGJeHuMR4MsBA/93BLCAVaotE.jpg?size=16x16&quality=95&sign=37968f33779ee0f617039210dd389fea&type=album"
-                className={style.imgFour}
-              />
-              <p className={style.textPrice}>0.435 MATIC</p>
+              <p className={style.textPrice}>{info?.rublePrice} P</p>
             </div>
             <div className={style.infoFour}>
-              <button className={style.btnP}>
-                Продать
+              <button className={style.btnP} disabled={!info || loading} onClick={() => ProductInfoModel.clickedOnBuy(info!)}>
+                Купить
               </button>
               <button className={style.btnK}>
                 Подарить

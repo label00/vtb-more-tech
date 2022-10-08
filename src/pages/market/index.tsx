@@ -1,9 +1,15 @@
-import { Card, H2, H3, Tab, TabContent, Tabs } from 'src/shared/ui';
+import { H2, H3, Tab, TabContent, Tabs } from 'src/shared/ui';
 import { ProductCard } from 'src/widgets/market/ProductCard';
-import { FoodCard } from 'src/widgets/market/FoodCard';
 import { FoodSection } from 'src/pages/market/FoodSection';
+import { useGate, useStore } from 'effector-react';
+import { gate, clothes$, usual$ } from 'src/pages/market/model';
+import { Empty } from 'antd';
 
 export const MarketPage = () => {
+  useGate(gate);
+  const data = useStore(clothes$);
+  const other = useStore(usual$);
+
   return (
     <div>
       <H2 className="mb-10">Маркет</H2>
@@ -19,36 +25,38 @@ export const MarketPage = () => {
         <TabContent value="market">
           <H3 className="mb-6">Брендированные</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
+            { !data.length && <Empty description="Нет товаров" /> }
+            {
+              data.map((item, idx) =>
+                <ProductCard key={idx} id={item.uri} title={item.name} price={item.rublePrice} img={item.imageUrl} />)
+            }
           </div>
 
           <H3 className="my-6">Разное</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
+            { !data.length && <Empty description="Нет товаров" /> }
+            {
+              other.map((item, idx) =>
+                <ProductCard key={idx} id={item.uri} title={item.name} price={item.rublePrice} img={item.imageUrl} />)
+            }
           </div>
         </TabContent>
 
         <TabContent value="event">
           <H3 className="mb-6">Подписки</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
           </div>
 
           <H3 className="my-6">Разное</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
-            <ProductCard id="12" title="Сумка VTB черного цвета" count={32} price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
+            <ProductCard id="12" title="Сумка VTB черного цвета" price={125} img="/nft/nft-2.png" />
           </div>
         </TabContent>
 

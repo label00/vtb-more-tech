@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 interface NftCardProps {
   title: string;
-  count: any;
   price: any;
   img: string
   id: string;
@@ -19,7 +18,6 @@ export const ProductCard = (props: NftCardProps) => {
 
       <div>
         <H3 className="my-1.5">{props.title}</H3>
-        <span className="text-xs font-semibold text-slate-400">Осталось: {props.count}</span>
         <Link to={`/market/${props.id}`} className="group flex items-center justify-between pt-3 pb-3">
           <span className="text-blue-600 group-hover:text-blue-700 font-semibold">{props.price} ₽</span>
           <ChevronRight className="stroke-blue-600 group-hover:stroke-blue-700" />

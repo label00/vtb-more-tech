@@ -76,9 +76,10 @@
 }
 
 .imgOne {
+  background: #F2F2F2;
+  border-radius: 10px;
   width: 483px;
   height: 483px;
-  border-radius: 10px;
 }
 
 .blockedOne {
@@ -178,6 +179,10 @@
   background: #0542EE;
   border: 1px solid #0542EE;
   border-radius: 8px;
+}
+
+.btnP:disabled {
+  opacity: .1;
 }
 
 .btnK {
