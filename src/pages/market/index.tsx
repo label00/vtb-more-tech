@@ -3,6 +3,7 @@ import { ProductCard } from 'src/widgets/market/ProductCard';
 import { FoodSection } from 'src/pages/market/FoodSection';
 import { useGate, useStore } from 'effector-react';
 import { gate, clothes$, usual$ } from 'src/pages/market/model';
+import Food from "src/widgets/food/Food";
 
 export const MarketPage = () => {
   useGate(gate);
@@ -60,7 +61,7 @@ export const MarketPage = () => {
         </TabContent>
 
         <TabContent value="food">
-          <FoodSection />
+          <Food />
         </TabContent>
       </Tabs>
     </div>
