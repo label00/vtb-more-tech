@@ -7,6 +7,9 @@ export const getClothes = () => axios({
 export const getUsual = () => axios({
   method: 'GET', url: 'https://wegoapp.ru/api/nft/usual'}).then(data => data.data) as Promise<ClotheType[]>
 
+export const getProduct = (uri: string) => axios({
+  method: 'GET', url: `https://wegoapp.ru/api/nft/${uri}`}).then(data => data.data) as Promise<ClotheType>
+
 
 export const fetchBuyNft = (uri: string, currency: string) => axios({
   method: 'POST',
@@ -14,9 +17,7 @@ export const fetchBuyNft = (uri: string, currency: string) => axios({
   data: {
     uri,
     currency,
-  },
-  headers: {
     userId: 1,
-  }
+  },
 }).then(data => data.data);
 

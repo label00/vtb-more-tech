@@ -28,7 +28,7 @@ export const MainPage = () => {
       }>
         <TabContent value="event">
           <div className="grid grid-cols-2 gap-4 mb-[32px]">
-            <Card className="bg-contain bg-no-repeat bg-right-bottom bg-[url('images/event.png')]">
+            <Card className="bg-contain bg-no-repeat bg-right-bottom bg-[url('/images/event.png')]">
               <div className="flex flex-col h-full">
                 <H2 className="w-[200px] mb-[22px]">Семинар о<br /> коллективной<br /> работе</H2>
                 <DigitalChip ruble={34} />
@@ -74,7 +74,7 @@ export const MainPage = () => {
         </TabContent>
         <TabContent value="growth">
           <div className="grid grid-cols-2 gap-4 mb-[36px]">
-            <Card className="bg-contain bg-no-repeat bg-right-bottom bg-[url('images/event.png')]">
+            <Card className="bg-contain bg-no-repeat bg-right-bottom bg-[url('/images/event.png')]">
               <div className="flex flex-col h-full">
                 <H2 className="w-[200px] mb-[22px]">Семинар о<br /> коллективной<br /> работе</H2>
                 <DigitalChip ruble={34} />
@@ -87,7 +87,7 @@ export const MainPage = () => {
               </div>
             </Card>
 
-            <Card className="bg-contain bg-no-repeat bg-right-bottom bg-[url('images/event.png')]">
+            <Card className="bg-contain bg-no-repeat bg-right-bottom bg-[url('/images/event.png')]">
               <div className="flex flex-col h-full">
                 <H2 className="w-[200px] mb-[22px]">Семинар о<br /> коллективной<br /> работе</H2>
                 <DigitalChip ruble={34} />

@@ -22,7 +22,7 @@ export const MarketPage = () => {
         </>
       }>
         <TabContent value="market">
-          <H3 className="mb-6">Брендированные</H3>
+          <H3 className="mb-6">Одежда</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
             { !data.length && <div>Нет товаров</div> }
             {

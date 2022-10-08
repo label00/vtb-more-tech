@@ -1,23 +1,17 @@
-import { createEffect, createStore, sample } from 'effector';
+import { createEffect, restore, sample } from 'effector';
 import { createGate } from 'effector-react';
-import { ClotheType } from 'src/shared/types';
-import { getClothes } from 'src/shared/api';
+import { getProduct } from 'src/shared/api';
 
-const fetchClothes = createEffect(() => getClothes())
+const fetchClothes = createEffect((uri: string) => getProduct(uri))
 const gate = createGate<string>();
-const store$ = createStore<ClotheType | null>(null);
+const store$ = restore(fetchClothes.done.map(({result}) => result), null);
 
 sample({
   clock: gate.open,
   target: fetchClothes,
 })
 
-sample({
-  clock: fetchClothes.done,
-  source: gate.open,
-  fn: (uri, { result }) => result.find(item => item.uri === uri) ?? null,
-  target: store$,
-})
+store$.reset(gate.close);
 
 export const MarketItemModel = {
   gate,
