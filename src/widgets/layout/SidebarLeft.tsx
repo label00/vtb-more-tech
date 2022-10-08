@@ -91,7 +91,7 @@ const menuItems = [
 ]
 
 
-export const Sidebar = () => {
+export const SidebarLeft = () => {
   const [active, setActive] = useState(false)
 
   return (
