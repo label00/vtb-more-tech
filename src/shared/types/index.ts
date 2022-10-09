@@ -1,4 +1,4 @@
-export type ClotheType = {
+export type ProductType = {
   uri: string;
   name: string;
   imageUrl: string;

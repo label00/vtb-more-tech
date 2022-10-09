@@ -1,13 +1,12 @@
 import React from 'react';
-import style from '../style.module.css';
+import style from './style.module.css';
 import { Link } from 'react-router-dom';
 import { useStore } from 'effector-react';
-import { MarketItemModel } from 'src/pages/market-item/model';
-import { ProductInfoModel } from 'src/widgets/market/product-info/product-info-model';
+import { BuyNftButton } from 'src/features/market';
+import { ProductModel } from 'src/entities/product';
 
 const ProductInfo = () => {
-  const info = useStore(MarketItemModel.store$);
-  const loading = useStore(ProductInfoModel.loading$);
+  const info = useStore(ProductModel.store$);
 
   return (
     <div className={style.containerGen}>
@@ -41,9 +40,7 @@ const ProductInfo = () => {
               <p className={style.textPrice}>{info?.rublePrice} P</p>
             </div>
             <div className={style.infoFour}>
-              <button className={style.btnP} disabled={!info || loading} onClick={() => ProductInfoModel.clickedOnBuy(info!)}>
-                Купить
-              </button>
+              <BuyNftButton info={info!}/>
               <button className={style.btnK}>
                 Подарить
               </button>

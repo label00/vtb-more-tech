@@ -1,14 +1,13 @@
 import { H2, H3, Tab, TabContent, Tabs } from 'src/shared/ui';
 import { ProductCard } from 'src/widgets/market/ProductCard';
-import { FoodSection } from 'src/pages/market/FoodSection';
 import { useGate, useStore } from 'effector-react';
-import { gate, clothes$, usual$ } from 'src/pages/market/model';
 import Food from "src/widgets/food/Food";
+import { ProductsModel } from 'src/entities/products';
 
 export const MarketPage = () => {
-  useGate(gate);
-  const data = useStore(clothes$);
-  const other = useStore(usual$);
+  useGate(ProductsModel.gate);
+  const clothes = useStore(ProductsModel.clothes$);
+  const other = useStore(ProductsModel.usual$);
 
   return (
     <div>
@@ -25,16 +24,16 @@ export const MarketPage = () => {
         <TabContent value="market">
           <H3 className="mb-6">Одежда</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            { !data.length && <div>Нет товаров</div> }
+            { !clothes.length && <div>Нет товаров</div> }
             {
-              data.map((item, idx) =>
+              clothes.map((item, idx) =>
                 <ProductCard key={idx} id={item.uri} title={item.name} price={item.rublePrice} img={item.imageUrl} />)
             }
           </div>
 
           <H3 className="my-6">Разное</H3>
           <div className="grid grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] gap-4">
-            { !data.length && <div>Нет товаров</div> }
+            { !clothes.length && <div>Нет товаров</div> }
             {
               other.map((item, idx) =>
                 <ProductCard key={idx} id={item.uri} title={item.name} price={item.rublePrice} img={item.imageUrl} />)

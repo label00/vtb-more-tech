@@ -1,6 +1,6 @@
 import { createEffect, createStore, sample } from 'effector';
 import { getUsual } from 'src/shared/api/market';
 import { createGate } from 'effector-react';
-import { ClotheType } from 'src/shared/types';
+import { ProductType } from 'src/shared/types';
 
 

@@ -13,7 +13,7 @@ sample({
 
 store$.reset(gate.close);
 
-export const MarketItemModel = {
+export const ProductModel = {
   gate,
   store$,
   fetch: fetchClothes,

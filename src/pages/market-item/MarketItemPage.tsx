@@ -1,13 +1,11 @@
-import ProductInfo from 'src/widgets/market/product-info/ProductInfo';
+import ProductInfo from 'src/widgets/market/ProductInfo';
 import { useParams } from 'react-router-dom';
 import { useGate } from 'effector-react';
-import { MarketItemModel } from 'src/pages/market-item/model';
+import { ProductModel } from 'src/entities/product';
 
-type MarketItemProps = {
-};
-export const MarketItemPage = (props: MarketItemProps) => {
+export const MarketItemPage = () => {
   const params = useParams();
-  useGate(MarketItemModel.gate, params.id!)
+  useGate(ProductModel.gate, params.id!)
 
   return (
     <ProductInfo />

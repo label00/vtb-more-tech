@@ -1,15 +1,15 @@
 import { createEffect, createEvent, sample } from 'effector';
 import { toast } from 'react-toastify';
-import { ClotheType } from 'src/shared/types';
+import { ProductType } from 'src/shared/types';
 import { fetchBuyNft } from 'src/shared/api/market';
 
-const clickedOnBuy = createEvent<ClotheType>();
-const buyNft = createEffect((info: ClotheType) => {
+const clickedOnBuy = createEvent<ProductType>();
+const buyNft = createEffect((info: ProductType) => {
   return fetchBuyNft(info.uri, 'RUBLE')
 });
 
 buyNft.done.watch(() => {
-  toast('Вы купили')
+  toast('Покупка прошла успешно')
 })
 
 buyNft.fail.watch(() => {
@@ -18,7 +18,6 @@ buyNft.fail.watch(() => {
   })
 })
 
-
 sample({
   clock: clickedOnBuy,
   target: buyNft,
@@ -26,7 +25,7 @@ sample({
 
 const loading$ = buyNft.pending;
 
-export const ProductInfoModel = {
+export const BuyNftModel = {
   clickedOnBuy,
   loading$,
 }
