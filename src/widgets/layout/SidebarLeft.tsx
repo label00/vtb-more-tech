@@ -5,88 +5,81 @@ import { NavLink } from 'react-router-dom';
 
 const menuItems = [
   {
-    title: 'Навигатор',
-    link: '/',
-    active: true,
-    img: '/icons/document-info.svg',
-    notifications: null,
-  },
-  {
-    title: 'Обучение',
+    title: 'Главная',
     active: false,
     img: '/icons/target.svg',
-    notifications: null,
-    link: '/t'
-  },
-  {
-    title: 'Проверка знаний',
-    active: false,
-    img: '/icons/users-alt.svg',
-    notifications: null,
-    link: '/t'
+    link: '/',
+    end: true,
   },
   {
     title: 'Маркет',
     active: false,
     img: '/icons/shopping-bag.svg',
-    notifications: null,
-    link: '/market'
-  },
-  {
-    title: 'Вебинары',
-    active: false,
-    img: '/icons/notes.svg',
-    notifications: null,
-    link: '/t'
+    link: '/market',
+    end: false,
   },
   {
     title: 'Обучение',
     active: false,
     img: '/icons/headphones.svg',
-    notifications: null,
-    link: '/education'
+    link: '/education',
+    end: false,
+  },
+  {
+    title: 'Проверка знаний',
+    active: false,
+    img: '/icons/users-alt.svg',
+    link: '/404',
+    end: false,
+  },
+  {
+    title: 'Вебинары',
+    active: false,
+    img: '/icons/notes.svg',
+    link: '/404',
+    end: false,
   },
   {
     title: 'Финансы',
     active: false,
     img: '/icons/suitcase.svg',
-    notifications: null,
-    link: '/t'
+    link: '/404',
+    end: false,
   },
   {
     title: 'Документы',
     active: false,
     img: '/icons/lightning.svg',
-    notifications: null,
-    link: '/t'
+    link: '/404',
+    end: false,
   },
   {
     title: 'Идеи',
     active: false,
     img: '/icons/star.svg',
-    notifications: null,
-    link: '/t'
+    link: '/404',
+    end: false,
   },
   {
     title: 'Объявления',
     active: false,
     img: '/icons/ads.svg',
-    notifications: null,
-    link: '/t'
+    link: '/404',
+    end: false,
   },
   {
     title: 'Еще',
     active: false,
     img: '/icons/subject.svg',
-    notifications: null,
-    link: '/t'
+    link: '/404',
+    end: false,
   },
   {
     title: 'Автоматизация',
     active: false,
     img: '/icons/suitcase.svg',
-    notifications: null,
-    link: '/t'
+    link: '/404',
+    end: false,
   },
 ]
 
@@ -104,8 +97,11 @@ export const SidebarLeft = () => {
         <img alt="logo" src="/icons/logo.svg" className={s.logo}/>
         <ul className={s.Sidebar_menu}>
           {menuItems.map((e, index) => (
-            <NavLink end to={e.link} key={index} className={({ isActive }) => cn(s.link, { [s.active]: isActive })}>
-              <img src={`${e.img}`} alt="icon"/>
+            <NavLink end={e.end} to={e.link} key={index} className={({ isActive }) => cn(s.link, s.primary, { [s.active]: isActive })}>
+              <div className={cn(s.img, 'flex-shrink-0')}>
+                <img  src={`${e.img}`} alt="icon"/>
+              </div>
+
               <p>{e.title}</p>
             </NavLink>
           ))}
