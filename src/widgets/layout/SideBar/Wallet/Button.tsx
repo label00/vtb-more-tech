@@ -1,8 +1,10 @@
-type Props = {icon: string, text: string, onClick?: () => void};
+import cn from 'classnames';
 
-const Button = ({icon, text, onClick}: Props) => {
+type Props = {icon: string, text: string, onClick?: () => void, disabled?: boolean};
+
+const Button = ({icon, text, onClick, disabled}: Props) => {
     return (
-        <li className="sidebar__buttons-item" onClick={onClick}>
+        <li className={cn('sidebar__buttons-item', { '--disabled': disabled })} onClick={onClick}>
             <div className="sidebar__buttons-icon">
                 <img src={icon} alt={text} />
             </div>

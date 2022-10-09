@@ -18,14 +18,14 @@ export const Wallet = () => {
         <Balance icon="/img/global/layout/sidebar/wallet/balance/rub-icon.svg" sum={`${data.coinsAmount} ₽`} link="#"/>
       </div>
       <ul className="sidebar__buttons">
-        <Button icon="/img/global/layout/sidebar/wallet/buttons/top-up-icon.svg" text="Пополнить"/>
+        <Button disabled icon="/img/global/layout/sidebar/wallet/buttons/top-up-icon.svg" text="Пополнить"/>
         <Button
           icon="/img/global/layout/sidebar/wallet/buttons/send-icon.svg"
           text="Отправить"
           onClick={() => SendCoinModel.clickedOpen()}
         />
-        <Button icon="/img/global/layout/sidebar/wallet/buttons/exchange-icon.svg" text="Обменять"/>
-        <Button icon="/img/global/layout/sidebar/wallet/buttons/withdraw-icon.svg" text="Вывести"/>
+        <Button disabled icon="/img/global/layout/sidebar/wallet/buttons/exchange-icon.svg" text="Обменять"/>
+        <Button disabled icon="/img/global/layout/sidebar/wallet/buttons/withdraw-icon.svg" text="Вывести"/>
       </ul>
 
       <SendCoinDialog />
